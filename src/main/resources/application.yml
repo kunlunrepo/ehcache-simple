@@ -1,0 +1,15 @@
+
+# ehcache基础配置
+ehcache:
+  heap: 1000     # 堆内内存缓存个数
+  off-heap: 10   # 堆外内存存储大小 MB
+  disk: 20       # 磁盘存储数据大小 MB
+  diskDir: ./data/  #磁盘存储路径
+  cacheNames:    # 基于CacheManager构建多少个缓存
+    - user
+    - item
+    - card
+
+logging:
+  level:
+    com.msb.controller.CacheTestController: DEBUG
